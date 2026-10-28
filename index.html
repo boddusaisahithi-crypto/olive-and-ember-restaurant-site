@@ -1,0 +1,81 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Garden | Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🍽️ Spice Garden</h1>
+        <p>Fresh food, happy mood!</p>
+        <a href="#menu" class="button">Explore Menu</a>
+    </header>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#cart">Your Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <main>
+        <section id="home" class="welcome">
+            <h2>Welcome to Spice Garden!</h2>
+            <p>Discover delicious food prepared with love and fresh ingredients.</p>
+        </section>
+
+        <section id="menu" class="section">
+            <h2>Our Menu</h2>
+            <input type="search" id="search" placeholder="Search for food...">
+            <div id="categories" class="categories"></div>
+            <div id="menu-items" class="menu-grid">
+                <p>Loading menu...</p>
+            </div>
+        </section>
+
+        <section id="cart" class="section">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+            <p class="total">Total: ₹<span id="cart-total">0.00</span></p>
+
+            <form id="checkout-form">
+                <h3>Delivery Details</h3>
+                <label for="customer-name">Your name</label>
+                <input id="customer-name" name="customer_name" required>
+
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" required>
+
+                <label for="address">Delivery address</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <button type="submit" class="button">Place Order</button>
+            </form>
+
+            <p id="order-message" role="status"></p>
+        </section>
+
+        <section class="section">
+            <h2>Track Your Order</h2>
+            <form id="tracking-form">
+                <label for="order-number">Order number</label>
+                <input id="order-number" required>
+                <button type="submit" class="button">Track Order</button>
+            </form>
+            <div id="tracking-result" role="status"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Spice Garden Restaurant</p>
+        <p>Good food. Great memories.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
